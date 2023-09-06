@@ -11,9 +11,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BotonesRedesComponent } from './components/botones-redes/botones-redes.component';
 import { CaruselComponent } from './components/carusel/carusel.component';
 import { ProductsHomeComponent } from './components/products-home/products-home.component';
+import { CardInfoComponent } from './components/card-info/card-info.component';
+import { ProductsPageComponent } from './pages/products-page/products-page.component';
 
 const routes: Routes =[
-  {path:'', component:HomeComponent}
+  {path:'', component:HomeComponent},
+  {path:'productos',component:ProductsPageComponent},
+  {path:'inicio',redirectTo:''}
 ]
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ const routes: Routes =[
     HomeComponent,
     BotonesRedesComponent,
     CaruselComponent,
-    ProductsHomeComponent
+    ProductsHomeComponent,
+    CardInfoComponent,
+    ProductsPageComponent
   ],
   imports: [
     BrowserModule,

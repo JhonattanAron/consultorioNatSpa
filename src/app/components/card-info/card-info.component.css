@@ -1,0 +1,27 @@
+.caractersitcas ul{
+    list-style: none;
+}
+.verde:hover{
+    background-color: rgb(161, 233, 161);
+    transition: 1s;
+}
+.azul:hover{
+    background-color: rgb(162, 252, 252);
+    transition: 1s;
+}
+.amarillo:hover{
+    background-color: rgb(247, 245, 148);
+    transition: 1s;
+}
+.card{
+    transition: 1s;
+    filter: drop-shadow(1px 1px 9px rgb(114, 112, 112));
+}
+
+
+
+@media screen and (max-width:768px) {
+    .card{
+        width: 100% !important;
+    }
+}

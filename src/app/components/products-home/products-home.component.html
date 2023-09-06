@@ -1,10 +1,32 @@
-<section id="productos" class="sectionTwo">
+<section id="servicios" class="sectionTwo">
     <div class="productos-header">
-        <h1>Nuestros Productos</h1>
-        <h3>Obten los Mejores Productos Al Mejor Precio</h3>
+        <h1>Nuestros Servicios</h1>
+        <h3>El Mejor Servicio Al Mejor Precio</h3>
     </div>
-    <div class="productos">
-        
+    <div class="cards">
+        <app-card-info
+        [imgHeader]="['https://images.pexels.com/photos/6663456/pexels-photo-6663456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']"
+        cardTittle="belleza facial"
+        [Caractersitcas]="caracteristicasLimpiezaFacial"
+        colorHover="verde"
+        ></app-card-info>
+
+        <app-card-info
+        [imgHeader]="['https://images.pexels.com/photos/6551492/pexels-photo-6551492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']"
+        cardTittle="Lipo Sin Cirugia"
+        [Caractersitcas]="beneficiosLipoSinCirugia"
+        colorHover="amarillo"
+        ></app-card-info>
+
+        <app-card-info
+        [imgHeader]="['https://images.pexels.com/photos/3738355/pexels-photo-3738355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']"
+        cardTittle="Piglin Facial"
+        [Caractersitcas]="caracteristicasPeelingFacial"
+        colorHover="azul"
+        ></app-card-info>   
+    </div>
+    <div style="display: flex;justify-content: center;">
+        <button class="btn btn-outline-primary">Ver Productos De Cuidado Personal</button>
     </div>
 
 </section>

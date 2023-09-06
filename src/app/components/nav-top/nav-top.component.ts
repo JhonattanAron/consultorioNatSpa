@@ -19,7 +19,8 @@ export class NavTopComponent {
   }
 
   manejarNav(){
-    
+    const links = document.getElementById("links")
+    links?.classList.toggle('visible')
   }
 
 }

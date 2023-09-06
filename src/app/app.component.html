@@ -1,2 +1,7 @@
-<app-nav-top [paginas]="['inicio', 'productos' , 'servicios','nostros','contacto']"></app-nav-top>
+<app-nav-top [paginas]="[
+{link:'inicio',type:'page'},
+{link:'productos',type:'page'},
+{link:'servicios',type:'ancla'},
+{link:'nostros',type:'ancla'},
+{link:'contacto',type:'ancla'}]"></app-nav-top>
 <router-outlet></router-outlet>

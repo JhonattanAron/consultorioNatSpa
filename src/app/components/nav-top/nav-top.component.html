@@ -1,12 +1,16 @@
 <header [ngClass]="{'abajo': isScrolled}">
     <a href="" class="logo"><i class="bi bi-heart-pulse-fill"></i> NAT SPA</a>
     <nav>
-        <ul class="links">
+        <ul id="links"  class="links">
             <li *ngFor="let links of paginas"> 
-                <a href="#{{links}}">{{links | titlecase}}</a> 
+                    <a *ngIf="links.type == 'page';else linksId" (click)="manejarNav()" href="/{{links.link}}">{{links.link | titlecase}}</a> 
+                <ng-template #linksId>
+                    <a  (click)="manejarNav()" href="#{{links.link}}">{{links.link | titlecase}}</a> 
+                </ng-template>
             </li>
+            
         </ul> 
-        <div class="hamburger" (click)="manejarNav()">
+        <div id="menu" class="hamburger" (click)="manejarNav()">
             <i class="bi bi-list"></i>
         </div>
     </nav>
