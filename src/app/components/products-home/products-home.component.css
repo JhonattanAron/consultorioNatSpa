@@ -1,0 +1,22 @@
+.sectionTwo{
+    height: 100vh;
+}
+.productos-header{
+    display: flex;
+    height: 20vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.productos-header h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #012970;
+}
+.productos-header h3{
+    color: #1552bd;
+    font-size: 20px;
+    
+}
+

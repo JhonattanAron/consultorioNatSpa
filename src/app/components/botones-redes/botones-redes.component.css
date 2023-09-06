@@ -1,0 +1,21 @@
+.redes{
+    display: flex;
+}
+.boton i{
+    font-size: xx-large;
+    color: white;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+.boton i:hover{
+    font-size: 3rem;
+}
+.azul i:hover{
+    color: rgb(43, 152, 241);
+}
+.rosa i:hover{
+    color: rgb(233, 93, 221);
+}
+.verde i:hover{
+    color: green;
+}
