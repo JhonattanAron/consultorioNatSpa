@@ -13,7 +13,13 @@ import { CaruselComponent } from './components/carusel/carusel.component';
 import { ProductsHomeComponent } from './components/products-home/products-home.component';
 import { CardInfoComponent } from './components/card-info/card-info.component';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { ProductosComponent } from './components/productos/productos.component';
+import { CaruselProductsComponent } from './components/carusel-products/carusel-products.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 const routes: Routes =[
   {path:'', component:HomeComponent},
   {path:'productos',component:ProductsPageComponent},
@@ -29,13 +35,21 @@ const routes: Routes =[
     CaruselComponent,
     ProductsHomeComponent,
     CardInfoComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
+    ProductosComponent,
+    CaruselProductsComponent,
+    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgImageSliderModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

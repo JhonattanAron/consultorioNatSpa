@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "natspa-94878"
+  },
+  "targets": {
+    "natspa-94878": {
+      "hosting": {
+        "consultorio": [
+          "natspa-94878"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.products{
+    margin: 3vh;
+}
+
+.keen-slider{
+    display: flex;
+}
+.imgPr{
+    width: 250px;
+    border-radius: 10px;
+}
+.cardBody{
+    text-align: center;
+}
+
+.cardPr{
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px 9px rgb(94, 91, 91);
+}
+.productsName{
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.productPrice{
+    text-decoration:line-through;
+    font-size: 16px;
+    font-weight: 600;
+    color: red;
+}
+.price{
+    font-size: 15px;
+    font-weight: 800;
+    color: rgb(12, 11, 124);
+}
+.priceAct{
+    font-weight: 600;
+    color: rgb(10, 97, 10);
+}
+.Comprar{
+    padding: 20px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: rgb(248, 183, 43);
+}
+.green{
+    background-color: green;
+}
+@media screen and (max-width: 768px) {
+    .keen-slider{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        pointer-events: none;
+        transform: translateX(-1005);
+    }
+}
+
+
+
+
+

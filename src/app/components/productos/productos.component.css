@@ -1,0 +1,29 @@
+.productos-header{
+    text-align: center;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    display: flex;
+    height: 20vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.productos-header h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #d259dd;
+}
+.productos-header-info{
+    margin-top: 4vh;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #d259dd;
+}
+.productos-header h3{
+    color: #a915bd;
+    font-size: 20px; 
+}
+.search{
+    padding: 0px 10vw;
+}
