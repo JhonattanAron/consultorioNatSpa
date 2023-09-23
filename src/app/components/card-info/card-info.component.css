@@ -6,10 +6,10 @@
 .cardInfo{
     margin: 3vh 0px;
     transition: 1s;
-    filter: drop-shadow(1px 1px 9px rgb(114, 112, 112));
 }
 .card-img-top{
     width: 50%;
+    filter: drop-shadow(1px 1px 9px rgb(61, 61, 61));
 }
 .cardInfo{
     display: flex;

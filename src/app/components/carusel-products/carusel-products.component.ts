@@ -1,5 +1,6 @@
 import { Component, OnInit} from "@angular/core"
 import Products from "src/app/interfaces/productos";
+import { CarritoComprasService } from "src/app/services/carrito-compras.service";
 import { ProductsService } from "src/app/services/products.service";
 
 @Component({
@@ -13,7 +14,8 @@ export class CaruselProductsComponent implements OnInit {
   isLoading = true
 
   constructor(
-    private productsService:ProductsService
+    private productsService:ProductsService,
+    private carritoCompras:CarritoComprasService
   ) {
     this.cargarProductos()
   }
@@ -27,6 +29,11 @@ export class CaruselProductsComponent implements OnInit {
     )
    
   }
+
+  enviarAlCarrito(producto:Products){
+    this.carritoCompras.setProducts(producto);
+  }
+  
 
 
   ngOnInit() {

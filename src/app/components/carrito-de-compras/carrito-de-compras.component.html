@@ -1,0 +1,46 @@
+<div class="carrito">
+    <div class="navBack">
+        <a href="/"><button class="btn"><i class="icon bi bi-house-fill"></i></button></a>
+        <button  matBadge="{{contadorCarrito()}}" matBadgeSize="large" matBadgePosition="before" matBadgeColor="accent" class="btn" data-bs-toggle="modal" data-bs-target="#carritoCompras"><i class="icon bi bi-cart-fill"></i></button>    
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="carritoCompras" tabindex="-1" aria-labelledby="carritoComprasLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="carritoComprasLabel">Mi Carrito</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <td scope="row"></td>
+                <td scope="row">Icon</td>
+                <td scope="row">Nombre</td>
+                <td scope="row">Precio</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pr of productos; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td><img class="imgProducto" src="{{pr.urlImgPortada}}" alt=""></td>
+                <td>{{pr.nombre}}</td>
+                <td class="dobleRow">{{pr.precioOferta}}</td>
+                <td><i (click)="deleteProducto(pr)" class="quitar bi bi-file-excel-fill"></i></td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <h2>Total A Pagar:<span class="totalAPagar">{{calcularTotalPreciosOferta()}}</span></h2>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button (click)="enviarMensaje()" type="button" class="btn btn-success"><i class="iconC bi bi-whatsapp"></i>Realizar Pedido</button>
+        </div>
+      </div>
+    </div>
+  </div>

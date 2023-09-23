@@ -5,7 +5,7 @@
 </div>
 <div *ngIf="!isLoading">
   <div class="products">
-    <div class="cardPr" *ngFor="let dt of products">
+    <div class="cardPr" style="width: 350px;" *ngFor="let dt of products">
       <img src="{{dt.urlImgPortada}}" class="imgPr" alt="...">
       <div class="cardBody">
         <h3 class="productsName">{{dt.nombre}}</h3>
@@ -14,7 +14,7 @@
         <span class="price">Precio Oferta:</span>
         <h4 class="priceAct">{{dt.precioOferta}}</h4>
       </div>
-      <div class="Comprar yellow">Agregar Al Carrito</div>
+      <div (click)="enviarAlCarrito(dt)" class="Comprar green"><i class="carrito bi bi-cart-fill"></i>Agregar Al Carrito</div>
     </div>
   </div>
 </div>

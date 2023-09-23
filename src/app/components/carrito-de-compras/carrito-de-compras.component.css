@@ -1,0 +1,50 @@
+.carrito{
+    width: 80vw;
+    position: fixed;
+    bottom: 20px;
+    left: 8%;
+    background-color: rgba(32, 31, 31,0.8);
+    border-radius: 20px;
+}
+.table{
+    overflow: scroll !important;
+    max-height: 50vh;
+}
+
+.totalAPagar{
+    margin-left: 3vh;
+    color: green;
+    font-weight: 600;
+}
+.iconC{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.quitar{
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+.quitar:hover{
+    transform: scale(1.2);
+    color: rgb(192, 53, 157);
+}
+.imgProducto{
+    width: 15vh;
+    height: 10vh;
+    object-fit: fill;
+}
+.carrito .navBack{
+    padding: 3px;
+    display: flex;
+    justify-content: space-around;
+}
+.navBack button{
+    color: white;
+    text-align: center;
+}
+.icon{
+    font-size: 30px;
+    color: white;
+    margin: 3vh;
+}

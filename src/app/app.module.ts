@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule , Renderer2} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,10 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ProductosComponent } from './components/productos/productos.component';
 import { CaruselProductsComponent } from './components/carusel-products/carusel-products.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { CarritoDeComprasComponent } from './components/carrito-de-compras/carrito-de-compras.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatBadgeModule} from '@angular/material/badge';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
 
 
 
@@ -42,13 +46,16 @@ const routes: Routes =[
     ProductsPageComponent,
     ProductosComponent,
     CaruselProductsComponent,
-    
-
+    CarritoDeComprasComponent,
+    NosotrosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatSnackBarModule,
+    MatBadgeModule,
     NgImageSliderModule,
+    
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
