@@ -24,6 +24,6 @@ export class ProductsService {
     query.forEach((doc) =>{
        data.push(doc.data())
     })
-    return data
+    return data;
   }
 }

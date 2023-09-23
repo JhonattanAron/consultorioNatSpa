@@ -12,7 +12,7 @@ header{
     justify-content: space-around;
     transition: 0.7s;
     padding: 30px 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0,0.7);
 
     .logo{
         position: relative;

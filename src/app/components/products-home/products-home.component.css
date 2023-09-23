@@ -1,6 +1,4 @@
-.sectionTwo{
-    height: 100vh;
-}
+
 .productos-header{
     text-align: center;
     padding-top: 15vh;
@@ -22,11 +20,12 @@
 }
 .cards{
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;  
 }
 
 .cards>*{
-    margin: 3vh;
+    margin: 1vh;
 }
 

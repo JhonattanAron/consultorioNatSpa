@@ -1,11 +1,11 @@
-<div class="card {{colorHover}}" style="width: 30vw;" >
-    <img src="{{imgHeader}}" class="card-img-top" alt="cardheader">
+<div class="{{colorHover}} cardInfo apAnimation" style="width: 100%;" >
+  <div class="card-img-top">
+    <img src="{{imgHeader}}" class="img" alt="cardheader">
+  </div>
     <div class="card-body">
-      <h3 class="card-title">{{cardTittle | titlecase}}</h3>
+      <h3 class="card-title tittle-info">{{cardTittle | titlecase}}</h3>
       <div class="caractersitcas">
-        <ul>
-          <li *ngFor="let data of Caractersitcas" >✅ {{data}}</li>
-        </ul>
+          <p class="data">{{Caractersitcas}}</p>
       </div>
       <a href="#" class="btn btn-outline-success">Agendar Cita</a>
     </div>

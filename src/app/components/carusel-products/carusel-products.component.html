@@ -1,11 +1,20 @@
-<div class="keen-slider products" #sliderRef>
-  <div class="keen-slider__slide cardPr" *ngFor="let dt of products">
-    <img src="{{dt.image}}" class="imgPr" alt="...">
-    <div class="cardBody">
-      <h3 class="productsName">{{dt.name}}</h3>
-      <span class="price">Precio Anterior:</span><h5 class="productPrice">5.5</h5>
-      <span class="price">Precio Oferta:</span> <h4 class="priceAct">5.25</h4>
+<div *ngIf="isLoading" class="loader">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<div *ngIf="!isLoading">
+  <div class="products">
+    <div class="cardPr" *ngFor="let dt of products">
+      <img src="{{dt.urlImgPortada}}" class="imgPr" alt="...">
+      <div class="cardBody">
+        <h3 class="productsName">{{dt.nombre}}</h3>
+        <span class="price">Precio Anterior:</span>
+        <h5 class="productPrice">{{dt.precioNormal}}</h5>
+        <span class="price">Precio Oferta:</span>
+        <h4 class="priceAct">{{dt.precioOferta}}</h4>
+      </div>
+      <div class="Comprar yellow">Agregar Al Carrito</div>
     </div>
-    <div class="Comprar yellow">Agregar Al Carrito</div>
   </div>
 </div>

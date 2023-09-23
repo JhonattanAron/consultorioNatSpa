@@ -20,6 +20,10 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ProductosComponent } from './components/productos/productos.component';
 import { CaruselProductsComponent } from './components/carusel-products/carusel-products.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+
+
+
+
 const routes: Routes =[
   {path:'', component:HomeComponent},
   {path:'productos',component:ProductsPageComponent},

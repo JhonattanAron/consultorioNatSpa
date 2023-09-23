@@ -1,27 +1,78 @@
 .caractersitcas ul{
     list-style: none;
+    padding: 20px;
 }
-.verde:hover{
-    background-color: rgb(161, 233, 161);
-    transition: 1s;
-}
-.azul:hover{
-    background-color: rgb(162, 252, 252);
-    transition: 1s;
-}
-.amarillo:hover{
-    background-color: rgb(247, 245, 148);
-    transition: 1s;
-}
-.card{
+
+.cardInfo{
+    margin: 3vh 0px;
     transition: 1s;
     filter: drop-shadow(1px 1px 9px rgb(114, 112, 112));
+}
+.card-img-top{
+    width: 50%;
+}
+.cardInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
+.img{
+    filter: drop-shadow(1px , 1px , 10px black);
+    max-height: 50vh;
+    position: relative;
+    transition: 2s;
+}
+.apAnimation{
+    filter: drop-shadow(1px , 1px , 10px black);
+    max-height: 50vh;
+    position: relative;
+    transition: 2s;
+    opacity: 0;
+    transform: translateY(20vh);
+}
+.card-body{
+    width: 50% !important;
+}
+.traslate{
+    transition: 2s;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0vh);
+}
+.tittle-info{
+    font-size: 24px;
+    font-weight: 700;
+    color: #012970;
+}
+.data{
+    margin: 5px 0px;
+    line-height: 24px;
+    font-size: 19px;
+    width: 100%;
 }
 
 
 
 @media screen and (max-width:768px) {
-    .card{
-        width: 100% !important;
+    .card-img-top{
+        width: 100%; 
+        padding: 1vh;
+    }
+    .data{
+        width: 100%;
+    }
+    .img{
+        width: 100%;
+    }
+    .cardInfo{
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+    .card-body{
+        margin-left: auto;
+        margin-right: auto;
     }
 }

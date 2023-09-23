@@ -1,65 +1,40 @@
-import { Component, ElementRef, ViewChild } from "@angular/core"
-import KeenSlider ,  { KeenSliderInstance } from "keen-slider"
+import { Component, OnInit} from "@angular/core"
+import Products from "src/app/interfaces/productos";
+import { ProductsService } from "src/app/services/products.service";
 
 @Component({
   selector: 'app-carusel-products',
   templateUrl: './carusel-products.component.html',
   styleUrls: ['./carusel-products.component.css']
 })
-export class CaruselProductsComponent {
-  products = [
-    {
-      name: 'Producto 1',
-      description: 'Descripción del Producto 1',
-      image: 'https://a.espncdn.com/combiner/i?img=/photo/2023/0908/r1221456_1296x729_16-9.jpg'
-    },
-    {
-      name: 'Producto 2',
-      description: 'Descripción del Producto 2',
-      image: 'https://a.espncdn.com/combiner/i?img=/photo/2023/0908/r1221456_1296x729_16-9.jpg'
-    },
-    {
-      name: 'Producto 3',
-      description: 'Descripción del Producto 3',
-      image: 'https://a.espncdn.com/combiner/i?img=/photo/2023/0908/r1221456_1296x729_16-9.jpg'
-    },
-    {
-      name: 'Producto 4',
-      description: 'Descripción del Producto 4',
-      image: 'https://a.espncdn.com/combiner/i?img=/photo/2023/0908/r1221456_1296x729_16-9.jpg'
-    },
-    {
-      name: 'Producto 5',
-      description: 'Descripción del Producto 5',
-      image: 'https://a.espncdn.com/combiner/i?img=/photo/2023/0908/r1221456_1296x729_16-9.jpg'
-    },
-    {
-      name: 'Producto 6',
-      description: 'Descripción del Producto 6',
-      image: 'https://a.espncdn.com/combiner/i?img=/photo/2023/0908/r1221456_1296x729_16-9.jpg'
-    },
-  ];
-  @ViewChild("sliderRef") sliderRef!: ElementRef<HTMLElement>;
-  slider: KeenSliderInstance | null = null;
+export class CaruselProductsComponent implements OnInit {
+  products:Products[] = [];
+  currentSlide = 0;
+  isLoading = true
 
-  constructor() { }
-
-  ngAfterViewInit() {
-    this.slider = new KeenSlider(this.sliderRef.nativeElement, {
-      breakpoints: {
-        "(min-width: 400px)": {
-          slides: { perView: 2, spacing: 5 },
-        },
-        "(min-width: 1000px)": {
-          slides: { perView: 3, spacing: 10 },
-        },
-      },
-      slides: { perView: 1 },
-    })
+  constructor(
+    private productsService:ProductsService
+  ) {
+    this.cargarProductos()
   }
 
-  ngOnDestroy() {
-    if (this.slider) this.slider.destroy()
+  cargarProductos(){
+    this.productsService.getProducts().then(
+      data => {
+        this.products = data
+        this.isLoading = false
+      }
+    )
+   
+  }
+
+
+  ngOnInit() {
+    
+  }
+
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.products.length;
   }
  
 }

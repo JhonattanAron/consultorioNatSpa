@@ -1,5 +1,6 @@
 .products{
     margin: 3vh;
+    display: flex;
 }
 
 .keen-slider{
@@ -12,11 +13,18 @@
 .cardBody{
     text-align: center;
 }
+.loader{
+    display: flex;
+    height: 30vh !important;
+    justify-content: center !important;
+    align-items: center;
+}
 
 .cardPr{
     border-radius: 10px;
     padding: 20px;
     box-shadow: 1px 1px 9px rgb(94, 91, 91);
+    margin: 3vh;
 }
 .productsName{
     font-weight: 600;

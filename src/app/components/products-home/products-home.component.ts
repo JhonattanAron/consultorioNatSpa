@@ -7,40 +7,26 @@ import { Component } from '@angular/core';
 })
 export class ProductsHomeComponent {
   protected beneficiosLipoSinCirugia: string[] = [
-    'Mínimo tiempo de inactividad',
-    'Menos riesgos y complicaciones',
-    'Proceso no invasivo, sin incisiones',
-    'Anestesia general no requerida',
-    'Resultados visibles en poco tiempo',
-    'Reducción de grasa localizada',
-    'Menos dolor y molestias postoperatorias',
-    'No deja cicatrices permanentes',
-    'Puede ser realizado en varias áreas del cuerpo',
-    'Generalmente no requiere hospitalización',
+    `Aunque parezca increíble, en Nat Spa
+    lo hacemos realidad. Te contamos un poco sobre que es 
+    la grasa localizada y cómo eliminarla de manera inmediata 
+    con nuestro tratamiento de liposucción SIN CIRUGÍA y 
+    sin riesgos. `
   ];
   protected caracteristicasLimpiezaFacial: string[] = [
-    'Eliminación de impurezas de la piel',
-    'Exfoliación suave para eliminar células muertas',
-    'Limpieza profunda de los poros',
-    'Hidratación de la piel',
-    'Mejora de la circulación sanguínea facial',
-    'Estimulación de la regeneración celular',
-    'Reducción de puntos negros y acné leve',
-    'Relajación y sensación de frescura',
-    'Mejora de la textura de la piel',
-    'Mejora de la textura de la piel',
+    `El “triángulo de la belleza” lo forman los 
+    pómulos altos y la línea mandibular delgada o
+     bien definida, propio de los rostros jóvenes.
+      Es decir, la parte superior del rostro es más 
+      ancha y el mentón es alargado, suponiendo el 
+      punto más estrecho del rostro. Unos factores 
+    que generan una apariencia relajada y positiva.`
   ];
   protected caracteristicasPeelingFacial: string[] = [
-    'Exfoliación profunda de la piel',
-    'Eliminación de células muertas',
-    'Reducción de manchas oscuras y decoloración',
-    'Estimulación de la producción de colágeno',
-    'Reducción de arrugas y líneas finas',
-    'Mejora de la textura y tono de la piel',
-    'Puede ayudar en casos de acné y poros dilatados',
-    'Resultados visibles en múltiples sesiones',
-    'Puede ser personalizado según las necesidades de la piel',
-    'Puede requerir tiempo de recuperación dependiendo del tipo de peeling',
+    `Limpieza Facial Profunda / Hidratación y Nutrición Facial
+    La limpieza facial es un tratamiento de la piel de la cara 
+    orientado a extraer puntos negros, quitar puntos blancos y 
+    otras lesiones o acumulaciones de su piel.`
   ];
   
 
