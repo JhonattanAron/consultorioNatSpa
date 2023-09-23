@@ -34,7 +34,7 @@ export class CaruselProductsComponent implements OnInit {
   }
 
   nextSlide() {
-    this.currentSlide = (this.currentSlide + 1) % this.products.length;
+    
   }
  
 }
