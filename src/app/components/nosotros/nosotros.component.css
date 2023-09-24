@@ -63,7 +63,7 @@
     left: 0vw;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1200px) {
     .nostrosData{
         display: flex;
         flex-direction: column;

@@ -24,6 +24,8 @@ import { CarritoDeComprasComponent } from './components/carrito-de-compras/carri
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatBadgeModule} from '@angular/material/badge';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { CopyrigthComponent } from './components/copyrigth/copyrigth.component';
 
 
 
@@ -48,6 +50,8 @@ const routes: Routes =[
     CaruselProductsComponent,
     CarritoDeComprasComponent,
     NosotrosComponent,
+    ContactoComponent,
+    CopyrigthComponent,
   ],
   imports: [
     BrowserModule,

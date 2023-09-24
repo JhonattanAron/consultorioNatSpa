@@ -1,0 +1,8 @@
+.copy{
+    padding: 1vh;
+    background-color: black;
+    text-align: center;
+}
+.copy p{
+    color: rgb(117, 114, 114);
+}
