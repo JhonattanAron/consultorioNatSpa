@@ -12,12 +12,11 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout código fuente
-        uses: actions/checkout@v2 # Usar la versión 2 de actions/checkout
-      - name: Instalar dependencias y desplegar en Firebase Hosting
-        run: |
-          npm install # Suponiendo que deseas instalar las dependencias de tu proyecto
-          npm run build # Comando para compilar tu aplicación, ajusta según tus necesidades
-          npx firebase deploy --only hosting # Comando para desplegar en Firebase Hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }} # Asegúrate de que tengas una secret llamada FIREBASE_TOKEN configurada en tu repositorio
+      - uses: actions/checkout@v3
+      - run: npm deployxd
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NATSPA_94878 }}'
+          channelId: live
+          projectId: natspa-94878
