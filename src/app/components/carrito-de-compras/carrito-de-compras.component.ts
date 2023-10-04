@@ -35,7 +35,7 @@ export class CarritoDeComprasComponent {
     this.carritoComprasService.deleteProducto(producto)
   }
   enviarMensaje() {
-    const numeroWhatsApp = '+593984253830';
+    const numeroWhatsApp = '+593993792827';
     const mensajePersonalizado = `
 ------------------------------------------------- 
         *PEDIDO REALIZADO - NAT SPA*
